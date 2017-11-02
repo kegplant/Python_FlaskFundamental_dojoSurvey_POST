@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>blablabla</title>
+    <link rel="stylesheet" href={{url_for('static', filename='style.css')}}>
+</head>
+<body>
+    <form action='/result' method='post'>
+        <label>Your Name:
+            <input type='text' name='name'>
+        </label>
+        <select name="location">
+            <option value="san jose">SJC</option>
+            <option value="NYC">NYC</option>
+        </select>
+        <label>Comment:
+                <textarea name='comment'>textarea</textarea>
+        </label>
+        <button>Button</button>
+    </form>
+</body>
