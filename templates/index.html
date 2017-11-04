@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>blablabla</title>
+    <title>dojosurvey</title>
     <link rel="stylesheet" href={{url_for('static', filename='style.css')}}>
 </head>
 <body>
@@ -9,13 +9,25 @@
         <label>Your Name:
             <input type='text' name='name'>
         </label>
+        <label>Dojo Location:
         <select name="location">
             <option value="san jose">SJC</option>
             <option value="NYC">NYC</option>
         </select>
-        <label>Comment:
-                <textarea name='comment'>textarea</textarea>
         </label>
+        <label>Comment:
+                
+        </label>
+        <textarea name='comment'>textarea</textarea>
         <button>Button</button>
     </form>
+    <p>
+        {%with messages=get_flashed_messages()%}
+            {%if messages%}
+                {%for message in messages%}
+                    {{message}}
+                {%endfor%}
+            {%endif%}
+        {%endwith%}
+    </p>
 </body>
